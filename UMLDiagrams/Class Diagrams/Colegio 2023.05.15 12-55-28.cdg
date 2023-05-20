@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Colegio">
+  <ClassDiagramComponents>
+    <Class name="Colegio" package="com.mycompany.colegio" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Alumno" package="entidades" visibility="public" xPosition="-76.0" yPosition="143.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="cur" type="Curso" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="Curso" name="cur"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getCur" returnType="Curso" visibility="public"/>
+        <Method name="setCur" returnType="void" visibility="public">
+          <Argument type="Curso" name="cur"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BaseProfesor" package="entidades" visibility="public" xPosition="228.0" yPosition="2.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="creaBaseProfesor" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Profesor&gt;" name="z"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Curso" package="entidades" visibility="public" xPosition="228.0" yPosition="122.0">
+      <Fields>
+        <Field name="anio" type="int" visibility="private"/>
+        <Field name="division" type="String" visibility="private"/>
+        <Field name="profe" type="Profesor" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="anio"/>
+          <Argument type="String" name="division"/>
+          <Argument type="Profesor" name="profe"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getAnio" returnType="int" visibility="public"/>
+        <Method name="setAnio" returnType="void" visibility="public">
+          <Argument type="int" name="anio"/>
+        </Method>
+        <Method name="getDivision" returnType="String" visibility="public"/>
+        <Method name="setDivision" returnType="void" visibility="public">
+          <Argument type="String" name="division"/>
+        </Method>
+        <Method name="getProfe" returnType="Profesor" visibility="public"/>
+        <Method name="setProfe" returnType="void" visibility="public">
+          <Argument type="Profesor" name="profe"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Profesor" package="entidades" visibility="public" xPosition="655.0" yPosition="2.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="int" name="edad"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getEdad" returnType="int" visibility="public"/>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="int" name="edad"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ServicioAlumno" package="servicios" visibility="public" xPosition="401.0" yPosition="502.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="creaAlumno" returnType="void" visibility="public">
+          <Argument type="Alumno" name="a"/>
+          <Argument type="ArrayList&lt;Curso&gt;" name="cur"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ServicioCurso" package="servicios" visibility="public" xPosition="63.0" yPosition="483.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="crearCurso" returnType="void" visibility="public">
+          <Argument type="Curso" name="c"/>
+          <Argument type="ArrayList&lt;Profesor&gt;" name="pro"/>
+        </Method>
+        <Method name="muestraCurso" returnType="void" visibility="public">
+          <Argument type="Curso" name="c"/>
+        </Method>
+        <Method name="muestraCursos" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Curso&gt;" name="c"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ServicioProfesor" package="servicios" visibility="public" xPosition="665.0" yPosition="343.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="creaProfesor" returnType="void" visibility="public">
+          <Argument type="Profesor" name="p"/>
+        </Method>
+        <Method name="muestraProfesor" returnType="void" visibility="public">
+          <Argument type="Profesor" name="p"/>
+        </Method>
+        <Method name="muestraProfesores" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Profesor&gt;" name="p"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="profe" source="entidades.Curso" target="entidades.Profesor" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="entidades.BaseProfesor" target="entidades.Profesor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="servicios.ServicioAlumno" target="entidades.Curso" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="servicios.ServicioProfesor" target="entidades.Profesor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cur" source="entidades.Alumno" target="entidades.Curso" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="servicios.ServicioCurso" target="entidades.Curso" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="servicios.ServicioCurso" target="entidades.Profesor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="entidades.Curso" target="entidades.Profesor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="entidades.Alumno" target="entidades.Curso" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
