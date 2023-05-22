@@ -9,22 +9,22 @@ package entidades;
  * @author John
  */
 public class Baraja {
-    private int[]numero;
+    private String numero;
     private String palo;
 
     public Baraja() {
     }
 
-    public Baraja(int[] numero, String palo) {
+    public Baraja(String numero, String palo) {
         this.numero = numero;
         this.palo = palo;
     }
 
-    public int[] getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int[] numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 
@@ -41,4 +41,6 @@ public class Baraja {
         return "Baraja{" + "numero=" + numero + ", palo=" + palo + '}';
     }
     
+
+
 }

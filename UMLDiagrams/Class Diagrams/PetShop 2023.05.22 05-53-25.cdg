@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="PetShop">
+  <ClassDiagramComponents>
+    <Class name="PetShop" package="com.mycompany.petshop" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BasePerro" package="entidades" visibility="public" xPosition="-22.0" yPosition="141.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="basePerros" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Perro&gt;" name="p"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Perro" package="entidades" visibility="public" xPosition="268.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="adoptado" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="boolean" name="adoptado"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="isAdoptado" returnType="boolean" visibility="public"/>
+        <Method name="setAdoptado" returnType="void" visibility="public">
+          <Argument type="boolean" name="adoptado"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="entidades" visibility="public" xPosition="20.0" yPosition="310.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="yaTiene" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="boolean" name="yaTiene"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="isYaTiene" returnType="boolean" visibility="public"/>
+        <Method name="setYaTiene" returnType="void" visibility="public">
+          <Argument type="boolean" name="yaTiene"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ServicioPerro" package="servicios" visibility="public" xPosition="645.0" yPosition="55.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="iniciaPerro" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Perro&gt;" name="parr"/>
+          <Argument type="Perro" name="p"/>
+        </Method>
+        <Method name="muestraPerros" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Perro&gt;" name="parr"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ServicioPersona" package="servicios" visibility="public" xPosition="452.0" yPosition="356.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="iniciaPersona" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Persona&gt;" name="arrp"/>
+          <Argument type="Persona" name="p"/>
+        </Method>
+        <Method name="personaAdopta" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Persona&gt;" name="p"/>
+          <Argument type="ArrayList&lt;Perro&gt;" name="pr"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="servicios.ServicioPersona" target="entidades.Persona" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="servicios.ServicioPerro" target="entidades.Perro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="entidades.BasePerro" target="entidades.Perro" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
