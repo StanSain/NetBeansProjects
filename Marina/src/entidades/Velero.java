@@ -29,17 +29,7 @@ public class Velero extends Barco {
         this.mastiles = mastiles;
     }
 
-public ArrayList<Velero> construirVelero(ArrayList<Velero> av, Velero v){
-    Scanner leer = new Scanner(System.in);
-    System.out.println("Año fabrica");
-    v.setAnioFabrica(leer.nextInt());
-    System.out.println("Eslora");
-    v.setEslora(leer.nextInt());
-    System.out.println("Mastiles");
-    v.setMastiles(leer.nextInt());
-    System.out.println("Matricula");
-    v.setMatricula(leer.next());
-    av.add(v);
-    return av;
+public Velero construirVelero( Velero v){
+  return v;
 }
 }

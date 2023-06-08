@@ -50,14 +50,11 @@ public class Barco {
         this.anioFabrica = anioFabrica;
     }
 
-    public ArrayList<Barco> construyeBarco(ArrayList<Barco> a, Barco b) {
+    public Barco construyeBarco(Barco b) {
         Scanner leer = new Scanner(System.in);
         b.setMatricula(leer.next());
         b.setEslora(leer.nextInt());
         b.setAnioFabrica(leer.nextInt());
-        a.add(b);
-
-        return a;
-
+        return b;
     }
 }

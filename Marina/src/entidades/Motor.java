@@ -35,17 +35,7 @@ public class Motor extends Barco {
         this.potencia = potencia;
     }
 
- public ArrayList<Motor> construirMotor(ArrayList<Motor> am, Motor m){
-    Scanner leer = new Scanner(System.in);
-    System.out.println("Año fabrica");
-    m.setAnioFabrica(leer.nextInt());
-    System.out.println("Eslora");
-    m.setEslora(leer.nextInt());
-    System.out.println("Potencia");
-    m.setPotencia(leer.nextInt());
-    System.out.println("Matricula");
-    m.setMatricula(leer.next());
-    am.add(m);
-    return am;
+ public Motor construirMotor( Motor m){
+return m;
 }
 }

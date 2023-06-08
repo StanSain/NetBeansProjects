@@ -12,14 +12,23 @@ import java.util.ArrayList;
  * @author John
  */
 public class SerCliente {
-    public Cliente  creaClientes(){
+
+    public void creaClientes(ArrayList<Cliente> a) {
         Cliente c1 = new Cliente();
         c1.setNombre("Juan");
         c1.setApellido("Perez");
-        c1.setDocumento("DNI 5.602.351" );
+        c1.setDocumento("DNI 5.602.351");
         c1.setDomicilio("calle oscura 45");
         c1.setTelefono("por tarrito desde la calle");
-        
-        return c1;
+        a.add(c1);
+
+        Cliente c2 = new Cliente();
+        c2.setNombre("Juana");
+        c2.setApellido("Gomez");
+        c2.setDocumento("DNI 5.425.340");
+        c2.setDomicilio("avenida del perro");
+        c2.setTelefono("jaifon nuevo");
+        a.add(c2);
+
     }
 }

@@ -6,9 +6,6 @@ Sin embargo, se pretende diferenciar la información de algunos tipos de barcos 
 • Número de mástiles para veleros.
 • Potencia en CV para barcos a motor.
 • Potencia en CV y número de camarotes para yates de lujo*/
-
-
-
 package marina;
 
 import entidades.Barco;
@@ -29,16 +26,19 @@ public class Marina {
     public static void main(String[] args) {
         ArrayList<Barco> a = new ArrayList<Barco>();
         Barco b = new Barco();
-        b.construyeBarco(a, b);
+        b = b.construyeBarco(b);
+        a.add(b);
         ArrayList<Velero> av = new ArrayList<Velero>();
         Velero v = new Velero();
-        v.construirVelero(av, v);
+        v = v.construirVelero(v);
+        av.add(v);
         ArrayList<Motor> am = new ArrayList<Motor>();
         Motor m = new Motor();
-        m.construirMotor(am, m);        
-    ArrayList<Yate> ay = new ArrayList<Yate>();
+        m = m.construirMotor(m);
+        ArrayList<Yate> ay = new ArrayList<Yate>();
         Yate y = new Yate();
-        y.construirYate(ay, y); 
+        y = y.construirYate(y);
+        ay.add(y);
     }
-    
+
 }

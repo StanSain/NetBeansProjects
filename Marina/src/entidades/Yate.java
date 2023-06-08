@@ -42,18 +42,9 @@ public class Yate extends Motor {
     
     
     
-    public ArrayList<Yate> construirYate(ArrayList<Yate> ay, Yate y){
-        System.out.println("Año");
-        y.setAnioFabrica(anioFabrica);
-        System.out.println("camarotes");
-        y.setCamarotes(0);
-        System.out.println("eslora");
-        y.setEslora(eslora);
-        System.out.println("matricula");
-        y.setMatricula(matricula);
-        System.out.println("potencia");
-        y.setPotencia(potencia);      
-        return ay;
+    public Yate construirYate( Yate y){
+  
+        return y;
     }
 }
 

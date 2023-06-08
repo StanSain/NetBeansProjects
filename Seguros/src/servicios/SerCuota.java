@@ -4,7 +4,7 @@
  */
 package servicios;
 
-import entidades.Cliente;
+import entidades.Cuota;
 import entidades.Poliza;
 import java.util.ArrayList;
 
@@ -14,4 +14,9 @@ import java.util.ArrayList;
  */
 public class SerCuota {
 
+    public void iniciaCuotas(ArrayList<Poliza> p) {
+        for (int i = 0; i < p.size(); i++) {
+            System.out.println(p.get(i).getNumero()+" "+p.get(i).getCli().getApellido());
+        }
+    }
 }
